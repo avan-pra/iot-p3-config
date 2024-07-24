@@ -14,7 +14,7 @@ spec:
         app: avan-webapp
     spec:
       containers:
-        - image: avanaaa/iotapp:v1
+      - image: avanaaa/iotapp:v1
         name: avan-webapp
         ports:
         - containerPort: 8080
