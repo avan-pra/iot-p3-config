@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: avan-webapp
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: avan-webapp
+  template:
+    metadata:
+      labels:
+        app: avan-webapp
+    spec:
+      containers:
+        - image: avanaaa/iotapp:v1
+        name: avan-webapp
+        ports:
+        - containerPort: 8080
